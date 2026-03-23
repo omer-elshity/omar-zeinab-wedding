@@ -13,18 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "دعوة زفاف عمر وزينب",
-  description: "نتشرف بدعوتكم لحضور حفل زفافنا - ١١ مايو ٢٠٢٦",
+  title: "Omar & Zeinab Wedding",
+  description: "We are honored to invite you to our wedding - May 11, 2026",
+  metadataBase: new URL('https://omar-zeinab-wedding.vercel.app'),
   openGraph: {
-    title: "دعوة زفاف عمر وزينب",
-    description: "نتشرف بدعوتكم لحضور حفل زفافنا - ١١ مايو ٢٠٢٦",
+    title: "Omar & Zeinab Wedding",
+    description: "We are honored to invite you to our wedding - May 11, 2026",
+    url: 'https://omar-zeinab-wedding.vercel.app',
+    siteName: 'Omar & Zeinab Wedding',
     images: [
       {
-        url: "/envelope.jpg", // هنا حطينا صورة الظرف اللي في مجلد public
+        url: '/envelope.jpg', 
         width: 1200,
         height: 630,
+        alt: 'Wedding Invitation Envelope',
       },
     ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Omar & Zeinab Wedding",
+    description: "We are honored to invite you to our wedding - May 11, 2026",
+    images: ['/envelope.jpg'],
   },
 };
 
