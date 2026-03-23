@@ -14,7 +14,7 @@ const NamesHeader = memo(() => (
     <h1 className="font-royal text-4xl md:text-6xl font-medium tracking-[0.2em] leading-tight gold-text-metallic uppercase">
       Zeinab
     </h1>
-    <p className="font-arabic text-[#5d4037] text-2xl mt-8 italic font-medium">ننتظركم بكل حب</p>
+    <p className="font-arabic text-[#5d4037] text-2xl mt-8 italic font-medium">ننتظركم بكل حب في حفل زفافنا</p>
   </div>
 ));
 NamesHeader.displayName = "NamesHeader";
