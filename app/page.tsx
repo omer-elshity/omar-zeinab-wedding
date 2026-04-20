@@ -23,11 +23,18 @@ const InfoSection = memo(() => (
   <div className="w-full px-2 tabular mt-4">
     <p className="font-royal text-2xl md:text-3xl text-[#3d2b1f] tracking-[0.3em] mb-6 font-semibold">11 . 05 . 2026</p>
     <div className="mb-10 space-y-3">
-      <p className="font-sans text-[14px] text-[#8c7355] font-bold uppercase tracking-[2px]">Ramage Hotel, New Cairo</p>
-      <p className="font-sans text-[10px] text-[#777] uppercase tracking-[3px] italic font-medium">The Andalusian Open Air Venue | 8:00 PM</p>
+      {/* تم إبراز اسم الفندق والقاعة هنا */}
+      <p className="font-sans text-[16px] md:text-[18px] text-[#8c7355] font-bold uppercase tracking-[2px] leading-tight">
+        Ramage Hotel, New Cairo
+      </p>
+      <p className="font-sans text-[12px] md:text-[13px] text-[#777] uppercase tracking-[3px] italic font-semibold">
+        The Andalusian Open Air Venue | 7:00 PM
+      </p>
     </div>
+    
+    {/* تم تكبير فونت جملة الأطفال وتنسيقها لتكون واضحة */}
     <div className="mt-8 px-6 mx-auto border-t border-[#e8dfd5] pt-8">
-      <p className="font-arabic text-[14px] md:text-[15px] text-[#5d4037] leading-relaxed italic">
+      <p className="font-arabic text-[18px] md:text-[20px] text-[#5d4037] leading-relaxed italic font-medium">
         "حرصًا على راحة الجميع والاستمتاع بأمسية هادئة ومميزة، نأمل منكم التكرم بترك الأطفال في المنزل."
       </p>
     </div>
@@ -56,7 +63,7 @@ const WeddingInvitation: React.FC = () => {
 
   useEffect(() => {
     setMounted(true);
-    const targetDate = new Date("2026-05-11T20:00:00").getTime();
+    const targetDate = new Date("2026-05-11T19:00:00").getTime(); // تم التعديل لـ 7 مساءً
     
     const calculateTime = () => {
       const now = new Date().getTime();
@@ -159,7 +166,6 @@ const WeddingInvitation: React.FC = () => {
         }
         @keyframes fadeInInvitation { from { opacity: 0; transform: translateY(50px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
-        /* أنيميشن البوب أب الشيك */
         .modal-enter {
           animation: modalFloatUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
@@ -221,7 +227,6 @@ const WeddingInvitation: React.FC = () => {
           </div>
         </div>
       ) : (
-        /* تم تعديل الشفافية هنا: جعلت الخلفية البيضاء شفافة بنسبة 40% (bg-[#fdf8f2]/40) وزدت الضبابية الخفيفة لتمييز الورقة عن الخلفية دون حجب الباتيرن */
         <div className="invitation-entrance w-full max-w-[550px] relative shadow-[0_40px_100px_rgba(0,0,0,0.08)] border border-[#d4af37]/20 rounded-[2.5rem] bg-[#fdf8f2]/40 backdrop-blur-sm overflow-hidden z-10 mx-4 px-2 py-2">
           
           <div className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none">
@@ -248,11 +253,11 @@ const WeddingInvitation: React.FC = () => {
                 Confirm Attendance
               </button>
               <button 
-                onClick={() => window.open("https://maps.app.goo.gl/LqBXAGUkNu5yeXb86")} 
+                onClick={() => window.open("https://maps.app.goo.gl/xxx")} // استبدل xxx برابط الفندق الحقيقي
                 className="flex items-center justify-center gap-3 text-[#8c7355] font-sans text-[11px] tracking-[3px] uppercase hover:text-[#b8860b] transition-all font-bold"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                Location Map
+                View Location
               </button>
             </div>
           </div>
